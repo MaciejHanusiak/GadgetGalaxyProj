@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadgetGalaxy", "GadgetGalaxy\GadgetGalaxy.csproj", "{D8648AFC-96E3-4102-8847-41D065C77134}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GadgetGalaxy", "GadgetGalaxy\GadgetGalaxy.csproj", "{D8648AFC-96E3-4102-8847-41D065C77134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadgetGalaxyDatabase", "GadgetGalaxyDatabase\GadgetGalaxyDatabase.csproj", "{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D8648AFC-96E3-4102-8847-41D065C77134}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8648AFC-96E3-4102-8847-41D065C77134}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8648AFC-96E3-4102-8847-41D065C77134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

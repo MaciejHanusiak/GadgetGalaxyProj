@@ -12,6 +12,10 @@
     <None Remove="Images\logo.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GadgetGalaxyDatabase\GadgetGalaxyDatabase.csproj" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <Resource Include="Images\bg.png" />

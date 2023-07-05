@@ -10,23 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GadgetGalaxy.VMs;
-using GadgetGalaxyDatabase;
 
-namespace GadgetGalaxy
+namespace GadgetGalaxy.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DisplayWindowView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DisplayWindowView : Window
     {
-        public MainWindow()
+        public DisplayWindowView()
         {
             InitializeComponent();
-            var dbcontext = new GGDbContext();
-            DataContext = new MainWindowVM(dbcontext);
+            DataContext = new DisplayWindowViewModel();
         }
     }
 }

@@ -20,9 +20,9 @@ namespace GadgetGalaxy
             base.OnStartup(e);
             using (var context = new GGDbContext())
             {
-                //context.Database.Migrate();
-                //var seeder = new DatabaseFiller(context);
-                //seeder.SeedData();
+                context.Database.Migrate();
+                var dbfill = new SeedDbData();
+                dbfill.SeedDatabase(context);
             }
         }
     }

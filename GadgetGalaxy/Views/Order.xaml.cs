@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GadgetGalaxy.VMs;
 
 namespace GadgetGalaxy.Views
 {
@@ -22,6 +23,7 @@ namespace GadgetGalaxy.Views
         public Order()
         {
             InitializeComponent();
+            DataContext = new OrderViewModel();
         }
     }
 }

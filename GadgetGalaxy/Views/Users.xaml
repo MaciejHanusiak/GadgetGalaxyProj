@@ -5,8 +5,79 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GadgetGalaxy.Views"
         mc:Ignorable="d"
-        Title="Users" Height="450" Width="800">
+        Title="Users" Height="800" Width="700">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/bg.png" Stretch="UniformToFill"/>
+        </Grid.Background>
         
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+             </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Image Width="100" Source="../Images/logo.jpg"></Image>
+                <TextBlock Text="USERS" 
+                           VerticalAlignment="Center" 
+                           Margin="30"
+                           HorizontalAlignment="Center" 
+                           Foreground="White" 
+                           FontSize="25"
+                           FontWeight="Bold"/>
+            </StackPanel>
+            <DataGrid Grid.Row="1" ItemsSource="{Binding TableDisplay}" 
+                      Foreground="Purple"
+                      Background="White"
+                      FontWeight="Bold" 
+                      IsReadOnly="True" 
+                      ColumnWidth="*" 
+                      Margin="20"
+                      AutoGenerateColumns="True" 
+                      BorderThickness="0"/>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                <Border  Background="Purple" CornerRadius="20"></Border>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel>
+                        <TextBlock Text="LOGIN" Foreground="White" HorizontalAlignment="Center" ></TextBlock>
+                        <TextBox Margin="10" Text="{Binding Login}" Height="30" Width="150" FontSize="15"/>
+                    </StackPanel>
+                    <StackPanel >
+                        <TextBlock Text="PASSWORD" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+                        <TextBox Margin="10" Text="{Binding Password}" Height="30" Width="150"  FontSize="15"></TextBox>
+                    </StackPanel>
+                    <Button Command="{Binding Add}" Margin="0 16 0 0" Height="30" Width="150" Content="ADD" Background="White" Foreground="Purple" FontSize="20" ></Button>
+
+                </StackPanel>
+
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Border  Background="Purple" CornerRadius="20"></Border>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="REMOVE BY ID" 
+                                   VerticalAlignment="Top" 
+                                   Margin="20"
+                                   HorizontalAlignment="Right" 
+                                   Foreground="White" 
+                                   FontSize="25"
+                                   FontWeight="Bold"/>
+                        <TextBox VerticalAlignment="Center" Margin="10" Text="{Binding ID}" Height="30" Width="150"  FontSize="15"></TextBox>
+                        <Button Command="{Binding Remove}"  Height="30" Width="150" Content="REMOVE" Background="White" Foreground="Purple" FontSize="20" ></Button>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
     </Grid>
 </Window>

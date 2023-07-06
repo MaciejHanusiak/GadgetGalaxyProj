@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GadgetGalaxy.VMs;
+using GadgetGalaxyDatabase;
 
 namespace GadgetGalaxy.Views
 {
@@ -22,6 +24,7 @@ namespace GadgetGalaxy.Views
         public Customers()
         {
             InitializeComponent();
+            DataContext = new CustomersViewModel(new GGDbContext());
         }
     }
 }

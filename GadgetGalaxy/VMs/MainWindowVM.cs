@@ -78,7 +78,6 @@ namespace GadgetGalaxy.VMs
         {
             if (_loginCommand.LoginUser(Username, Password))
             {
-                MessageBox.Show("Login Successfull");
                 var window = new DisplayWindowView();
                 if (Application.Current.MainWindow != null)
                 {

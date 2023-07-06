@@ -11,20 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using GadgetGalaxy.VMs;
-using GadgetGalaxyDatabase;
 
 namespace GadgetGalaxy.Views
 {
     /// <summary>
-    /// Interaction logic for DisplayWindowView.xaml
+    /// Interaction logic for Users.xaml
     /// </summary>
-    public partial class DisplayWindowView : Window
+    public partial class Users : Window
     {
-        public DisplayWindowView()
+        public Users()
         {
             InitializeComponent();
-            DataContext = new DisplayWindowViewModel();
         }
     }
 }

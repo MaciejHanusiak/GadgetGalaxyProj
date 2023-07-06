@@ -15,10 +15,7 @@
         </Grid.Background>
 
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
+            
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -70,5 +67,4 @@
                 </Button>
             </Grid>
         </Grid>
-    </Grid>
 </Window>

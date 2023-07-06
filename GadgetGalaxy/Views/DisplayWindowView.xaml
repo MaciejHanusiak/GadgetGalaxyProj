@@ -5,8 +5,130 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GadgetGalaxy.Views"
         mc:Ignorable="d"
-        Title="DisplayWindowView" Height="450" Width="800">
+        Title="Gadget Galaxy" Height="800" Width="700" Icon="/Images/icon.ico">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/bg.png" Stretch="UniformToFill"/>
+        </Grid.Background>
         
-    </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height=".5*"/>
+                    <RowDefinition Height="2.5*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="Purple" CornerRadius="20" Margin="15">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding TotalProducts}" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left"
+                                       Margin="10"
+                                       Foreground="White" 
+                                       FontSize="20"
+                                       />
+                            <TextBlock Text="{Binding TotalCustomers}" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left"
+                                       Margin="10"
+                                       Foreground="White" 
+                                       FontSize="20"
+                            />
+                            <TextBlock Text="{Binding TotalOrders}" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left"
+                                       Margin="10"
+                                       Foreground="White" 
+                                       FontSize="20"
+                            />
+                        </StackPanel>
+                    </Border>
+
+
+                    <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+                        <Image Width="150" Margin="0 20 0 0" Source="../Images/logo.jpg"></Image>
+                        <TextBlock Text="Gadget Galaxy" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center" 
+                                   Foreground="White" 
+                                   FontSize="25"
+                                   Margin="0 -15 0 0"
+                                   FontWeight="Bold"/>
+                    </StackPanel>
+                </Grid>
+
+
+                <Border Grid.Row="1" Background="Purple" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20">
+                        <StackPanel Orientation="Horizontal" >
+                        <Button Command="{Binding OrderViewShow}" 
+                                Margin="10" 
+                                Height="40" 
+                                Width="200" 
+                                Content="ORDERS" 
+                                Background="White" 
+                                Foreground="Purple" 
+                                FontSize="25" 
+                                FontWeight="Bold"/>
+                        <Button Command="{Binding UserViewShow}" 
+                                Margin="10" 
+                                Height="40" 
+                                Width="200" 
+                                Content="USERS" 
+                                Background="White" 
+                                Foreground="Purple" 
+                                FontSize="25" 
+                                FontWeight="Bold"/>
+                        <Button Command="{Binding CustomersViewShow}" 
+                                Margin="10" 
+                                Height="40" 
+                                Width="200" 
+                                Content="CUSTOMERS" 
+                                Background="White" 
+                                Foreground="Purple" 
+                                FontSize="25" 
+                                FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+                <StackPanel Grid.Row="2">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="PRODUCTS" 
+                                               VerticalAlignment="Top" 
+                                               Margin="30"
+                                               HorizontalAlignment="Center" 
+                                               Foreground="White" 
+                                               Opacity="1"
+                                               FontSize="25"
+                                               FontWeight="Bold"/>
+                        <Button Command="{Binding ProductsViewShow}" 
+                                Margin="10" 
+                                Height="40" 
+                                Width="180" 
+                                Content="UPDATE" 
+                                Background="White" 
+                                Foreground="Purple" 
+                                FontSize="25" 
+                                FontWeight="Bold"/>
+                    </StackPanel>
+                    <Grid HorizontalAlignment="Center" Height="370" Width="640" Margin="0">
+                        <DataGrid ItemsSource="{Binding DisplayTable}" 
+                                  Foreground="Purple"
+                                  Background="Transparent"
+                                  FontWeight="Bold" 
+                                  IsReadOnly="True" 
+                                  ColumnWidth="*" 
+                                  AutoGenerateColumns="True" 
+                                  BorderThickness="0"/>
+                    </Grid>
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
 </Window>

@@ -88,15 +88,15 @@ namespace GadgetGalaxy.VMs
 
         public ObservableCollection<User> TableDisplay
         {
-            get => _partsTableDisplay;
+            get => _TableDisplay;
             set
             {
-                _partsTableDisplay = value;
+                _TableDisplay = value;
                 OnPropertyChanged();
             }
         }
 
-        private ObservableCollection<User> _partsTableDisplay;
+        private ObservableCollection<User> _TableDisplay;
         private readonly GGDbContext _context;
         private readonly UsersOperations _usersOperations;
 

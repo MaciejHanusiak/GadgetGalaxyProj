@@ -32,6 +32,11 @@ public class DisplayWindowViewModel : INotifyPropertyChanged
         UserViewShow = new Command(UserShow);
         CustomersViewShow = new Command(CustomersShow);
         ProductsViewShow = new Command(ProductsShow);
+        UpdateDisplayableInfo();
+    }
+
+    public void UpdateDisplayableInfo()
+    {
         UpdatePartsTable();
         TotalProductsShow();
         TotalCustomersShow();

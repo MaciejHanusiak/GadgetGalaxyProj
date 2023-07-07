@@ -1,22 +1,20 @@
-﻿using GadgetGalaxy.Methods;
-using GadgetGalaxyDatabase.DbSets;
-using GadgetGalaxyDatabase;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using System.Windows;
+using System.Windows.Input;
+using GadgetGalaxy.Methods;
+using GadgetGalaxyDatabase;
+using GadgetGalaxyDatabase.DbSets;
 
-namespace GadgetGalaxy.VMs
+namespace GadgetGalaxy.VMs;
+
+public class OrderViewModel : INotifyPropertyChanged
 {
-    public class OrderViewModel : INotifyPropertyChanged
-    {
     private readonly GGDbContext _context;
+    private readonly OrdersOperations _ordersOperations;
     private readonly ProductsOperation _productsOperations;
 
     private string _categoryID;
@@ -33,50 +31,9 @@ namespace GadgetGalaxy.VMs
     public OrderViewModel(GGDbContext context)
     {
         _context = context;
-        _productsOperations = new ProductsOperation(_context);
-
-        Add = new Command(AddElementToDb);
+        _ordersOperations = new OrdersOperations(_context);
         Remove = new Command(RemoveFromDb);
         UpdateTable();
-    }
-
-    public string Name
-    {
-        get => _name;
-        set
-        {
-            if (_name != value)
-            {
-                _name = value;
-                OnPropertyChanged();
-            }
-        }
-    }
-
-    public string Price
-    {
-        get => _price;
-        set
-        {
-            if (_price != value)
-            {
-                _price = value;
-                OnPropertyChanged();
-            }
-        }
-    }
-
-    public string CategoryID
-    {
-        get => _categoryID;
-        set
-        {
-            if (_categoryID != value)
-            {
-                _categoryID = value;
-                OnPropertyChanged();
-            }
-        }
     }
 
     public string ID
@@ -127,32 +84,7 @@ namespace GadgetGalaxy.VMs
             return;
         }
 
-        _productsOperations.removeProduct(Convert.ToInt32(ID));
-        UpdateTable();
-    }
-
-    private void AddElementToDb()
-    {
-        if (string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Price) ||
-            string.IsNullOrWhiteSpace(CategoryID))
-        {
-            MessageBox.Show("Invalid input", "Error");
-            return;
-        }
-
-        if (!decimal.TryParse(Price, out var Pricee))
-        {
-            MessageBox.Show("Invalid Price. Please enter a valid decimal value.", "Error");
-            return;
-        }
-
-        if (Convert.ToInt32(CategoryID) > 10)
-        {
-            MessageBox.Show("Invalid CategoryId. CategoryID ranges from 1-10 Please enter a valid value.", "Error");
-            return;
-        }
-
-        _productsOperations.addProduct(Name, Price, Convert.ToInt32(CategoryID));
+        _ordersOperations.removeOrder(Convert.ToInt32(ID));
         UpdateTable();
     }
 
@@ -160,6 +92,5 @@ namespace GadgetGalaxy.VMs
     {
         var dbtotable = new DatabaseOperations(new GGDbContext());
         TableDisplay = new ObservableCollection<Order>(dbtotable.GetData<Order>());
-    }
     }
 }

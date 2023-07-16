@@ -11,6 +11,9 @@ using Order = GadgetGalaxy.Views.Order;
 
 namespace GadgetGalaxy.VMs;
 
+/// <summary>
+/// This class is the view model for the Display window.
+/// </summary>
 public class DisplayWindowViewModel : INotifyPropertyChanged
 {
     private readonly DatabaseOperations _databaseOperations;

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace GadgetGalaxyDatabase.DbSets
 {
+    /// <summary>
+    /// This class represents the Category table in the database.
+    /// </summary>
     public class Category
     {
         [Key]

@@ -7,6 +7,9 @@ using System.Windows.Input;
 
 namespace GadgetGalaxyDatabase
 {
+    /// <summary>
+    /// This class allows for the use of commands in the view model
+    /// </summary>
     public class Command : ICommand
     {
         private readonly Action _execute;

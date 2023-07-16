@@ -14,6 +14,9 @@ using System.Windows;
 
 namespace GadgetGalaxy.VMs
 {
+    /// <summary>
+    /// This class is the view model for the Customers window.
+    /// </summary>
     public class CustomersViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;

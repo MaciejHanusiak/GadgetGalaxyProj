@@ -11,6 +11,9 @@ using GadgetGalaxyDatabase.DbSets;
 
 namespace GadgetGalaxy.VMs;
 
+/// <summary>
+/// This class is the view model for the Products window.
+/// </summary>
 public class ProductsViewModel : INotifyPropertyChanged
 {
     private readonly GGDbContext _context;

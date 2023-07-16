@@ -14,6 +14,9 @@ using GadgetGalaxyDatabase;
 
 namespace GadgetGalaxy.VMs
 {
+    /// <summary>
+    /// This class is the view model for the Users window.
+    /// </summary>
     public class UsersViewModel : INotifyPropertyChanged
     {
         #region INotifyPropertyChanged

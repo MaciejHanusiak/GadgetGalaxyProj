@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GadgetGalaxyDatabase.DbSets
 {
+    /// <summary>
+    /// This class represents the Product table in the database.
+    /// </summary>
     public class Product
     {
         public int Id { get; set; }

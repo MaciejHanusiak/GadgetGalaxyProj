@@ -41,6 +41,10 @@ namespace GadgetGalaxyDatabase
             }
         }
 
+
+        /// <summary>
+        /// Seeds every data category into the database.
+        /// </summary>
     public void SeedCategory()
     {
         var categories = new List<Category>
@@ -65,7 +69,7 @@ namespace GadgetGalaxyDatabase
         _dbContext.SaveChanges();
     }
 
-    public void SeedCustomer()
+    private void SeedCustomer()
     {
         var customers = new List<Customer>
         {
@@ -104,7 +108,7 @@ namespace GadgetGalaxyDatabase
         _dbContext.SaveChanges();
     }
 
-    public void SeedProduct()
+    private void SeedProduct()
     {
         var products = new List<Product>
         {
@@ -138,7 +142,7 @@ namespace GadgetGalaxyDatabase
         _dbContext.SaveChanges();
     }
 
-    public void SeedUser()
+    private void SeedUser()
     {
         var users = new List<User>
         {
@@ -168,7 +172,7 @@ namespace GadgetGalaxyDatabase
         _dbContext.SaveChanges();
     }
 
-    public void SeedOrder()
+    private void SeedOrder()
     {
         var orders = new List<Order>
         {

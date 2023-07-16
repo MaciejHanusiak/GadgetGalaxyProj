@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GadgetGalaxyDatabase.DbSets
 {
+    /// <summary>
+    /// This class represents the User table in the database.
+    /// </summary>
     public class User
     {
         [Key]

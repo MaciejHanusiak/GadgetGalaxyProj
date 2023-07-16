@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GadgetGalaxy", "GadgetGalaxy\GadgetGalaxy.csproj", "{D8648AFC-96E3-4102-8847-41D065C77134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadgetGalaxyDatabase", "GadgetGalaxyDatabase\GadgetGalaxyDatabase.csproj", "{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GadgetGalaxyDatabase", "GadgetGalaxyDatabase\GadgetGalaxyDatabase.csproj", "{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GadgetGalaxyInstaler", "GadgetGalaxyInstaler\GadgetGalaxyInstaler.vdproj", "{2AB13D7F-3C5B-4154-85A9-9923B71650E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9CF02BB-66B3-4E76-BD55-12802CBDE53B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB13D7F-3C5B-4154-85A9-9923B71650E0}.Debug|Any CPU.ActiveCfg = Debug
+		{2AB13D7F-3C5B-4154-85A9-9923B71650E0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

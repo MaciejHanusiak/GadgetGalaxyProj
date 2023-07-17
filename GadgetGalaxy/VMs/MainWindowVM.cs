@@ -16,7 +16,7 @@ namespace GadgetGalaxy.VMs
     /// <summary>
     /// This class is the view model for the main window.
     /// </summary>
-    class MainWindowVM : INotifyPropertyChanged
+    public class MainWindowVM : INotifyPropertyChanged
     {
                  #region INotifyPropertyChanged
 

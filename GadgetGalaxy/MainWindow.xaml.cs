@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GadgetGalaxy.VMs;
+using GadgetGalaxyDatabase;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using GadgetGalaxy.VMs;
-using GadgetGalaxyDatabase;
 
 namespace GadgetGalaxy
 {
@@ -22,11 +10,22 @@ namespace GadgetGalaxy
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public MainWindowVM _MainWindowVM = new MainWindowVM(new GGDbContext());
+
         public MainWindow()
         {
             InitializeComponent();
-            var dbcontext = new GGDbContext();
-            DataContext = new MainWindowVM(dbcontext);
+            DataContext = _MainWindowVM;
         }
+
+        private void PasswordChange(object sender, RoutedEventArgs e)
+        {
+            if (sender is PasswordBox passwordBox)
+            {
+                _MainWindowVM.Password = passwordBox.Password;
+            }
+        }
+
     }
 }
